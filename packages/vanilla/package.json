@@ -1,0 +1,53 @@
+{
+  "name": "@ldesign/pdf-vanilla",
+  "version": "2.0.0",
+  "description": "Vanilla JavaScript wrapper for PDF viewer",
+  "keywords": [
+    "pdf",
+    "vanilla",
+    "javascript",
+    "pdf-viewer",
+    "no-framework"
+  ],
+  "author": "",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./es/index.d.ts",
+      "import": "./es/index.js",
+      "require": "./lib/index.cjs"
+    }
+  },
+  "main": "./lib/index.cjs",
+  "module": "./es/index.js",
+  "types": "./es/index.d.ts",
+  "unpkg": "./dist/index.min.js",
+  "jsdelivr": "./dist/index.min.js",
+  "files": [
+    "README.md",
+    "LICENSE",
+    "package.json",
+    "es",
+    "lib",
+    "dist"
+  ],
+  "scripts": {
+    "build": "ldesign-builder build",
+    "build:watch": "ldesign-builder build --watch",
+    "test": "vitest",
+    "test:watch": "vitest watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ldesign/pdf-core": "workspace:*"
+  },
+  "devDependencies": {
+    "@ldesign/builder": "workspace:*",
+    "@types/node": "^20.10.5",
+    "typescript": "^5.3.3",
+    "vitest": "^1.0.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "name": "@ldesign/pdf-core",
+  "version": "2.0.0",
+  "description": "Core PDF viewer library with enterprise-grade features",
+  "keywords": [
+    "pdf",
+    "viewer",
+    "pdf-viewer",
+    "core",
+    "enterprise"
+  ],
+  "author": "",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./es/index.d.ts",
+      "import": "./es/index.js",
+      "require": "./lib/index.cjs"
+    },
+    "./core/*": {
+      "types": "./es/core/*.d.ts",
+      "import": "./es/core/*.js",
+      "require": "./lib/core/*.cjs"
+    },
+    "./features/*": {
+      "types": "./es/features/*.d.ts",
+      "import": "./es/features/*.js",
+      "require": "./lib/features/*.cjs"
+    },
+    "./types": {
+      "types": "./es/types/index.d.ts",
+      "import": "./es/types/index.js",
+      "require": "./lib/types/index.cjs"
+    },
+    "./types/*": {
+      "types": "./es/types/*.d.ts",
+      "import": "./es/types/*.js",
+      "require": "./lib/types/*.cjs"
+    },
+    "./ui/*": {
+      "types": "./es/ui/*.d.ts",
+      "import": "./es/ui/*.js",
+      "require": "./lib/ui/*.cjs"
+    },
+    "./utils": {
+      "types": "./es/utils/index.d.ts",
+      "import": "./es/utils/index.js",
+      "require": "./lib/utils/index.cjs"
+    },
+    "./utils/*": {
+      "types": "./es/utils/*.d.ts",
+      "import": "./es/utils/*.js",
+      "require": "./lib/utils/*.cjs"
+    },
+    "./es/index.css": "./es/index.css",
+    "./lib/index.css": "./lib/index.css"
+  },
+  "main": "./lib/index.cjs",
+  "module": "./es/index.js",
+  "types": "./es/index.d.ts",
+  "unpkg": "./dist/index.min.js",
+  "jsdelivr": "./dist/index.min.js",
+  "files": [
+    "README.md",
+    "LICENSE",
+    "package.json",
+    "es",
+    "lib",
+    "dist"
+  ],
+  "scripts": {
+    "build": "ldesign-builder build",
+    "build:watch": "ldesign-builder build --watch",
+    "test": "vitest",
+    "test:watch": "vitest watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "pdfjs-dist": "^3.11.174"
+  },
+  "devDependencies": {
+    "@ldesign/builder": "workspace:*",
+    "@types/node": "^20.10.5",
+    "typescript": "^5.3.3",
+    "vitest": "^1.0.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
